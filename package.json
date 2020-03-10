@@ -12,6 +12,10 @@
     "babel-plugin-import": "^1.13.0",
     "classnames": "^2.2.6",
     "dva": "^2.4.1",
+    "loadsh": "^0.0.4",
+    "lodash": "^4.17.15",
+    "path-to-regexp": "^6.1.0",
+    "qs": "^6.9.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

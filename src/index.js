@@ -8,6 +8,7 @@ import '@/styles/iconfont.css'
 const app = dva({
   history: createHistory()
 })
+window.app = app
 
 // 2. Plugins
 // app.use({});
@@ -16,7 +17,7 @@ const app = dva({
 // app.model(require('./models/example').default);
 
 // 4. Router
-app.router(require('@/router').default);
+app.router(require('@/router').default)
 
 // 5. Start
-app.start('#root');
+app.start('#root')

@@ -6,5 +6,14 @@ export default {
   extraBabelPlugins: [
       ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
     ],
-  "disableCSSModules":true
+  disableCSSModules: true,
+  proxy: {
+    '/api': {
+      target: 'https://blogs.zdldove.top/',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': '',
+      }
+    }
+  }
   }

@@ -1,5 +1,5 @@
 import React, { useState }from 'react'
-import dynamic from 'dva/dynamic'
+import Cpt from './components'
 import { Router, Route, Switch } from 'dva/router'
 import TabBar from '@@/TabBar'
 import './router.less'
@@ -20,28 +20,15 @@ export default function RouterConfig({ history, app }) {
       path: '/list',
     }
   ])
-  const Home = dynamic({
-    app,
-    models: () => [
-      import('@/models/home'),
-    ],
-    component: () => import('@/pages/home'),
-  })
-  const List = dynamic({
-    app,
-    // models: () => [
-    //   import('./models/users'),
-    // ],
-    component: () => import('@/pages/list'),
-  })
+  
   return (
     <Router history={history}>
       <div className="basic" >
         <div className="basic_body">
         
             <Switch>
-              <Route path="/" exact component={Home} />
-              <Route path="/list" exact component={List} />
+              <Route path="/" exact component={Cpt.Home} />
+              <Route path="/list" exact component={Cpt.List} />
             </Switch>
           
         </div>
